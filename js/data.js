@@ -218,8 +218,21 @@ const students = [
 const kiekStudentu = students.length;
 console.log('kiekStudentu ===', kiekStudentu);
 
-// atrinkti tik pirmo kurso studentus
-
+// 1. atrinkti tik pirmo kurso studentus
+//Psiaudo kodas
+// 0. susikurti nauja svaru grazu tusia masyva reikemes susideti
+const pirmakursiai = [];
+// 1.sukti cikla per visa masyva, pasiimant kiekviena reiksme
+students.forEach((studObj) => {
+  // 2. ciklo metu turint sudento objekta as noriu patikrinti obj.course === 1
+  if (studObj.course === 1) {
+    // 2.a jei lygu tai as ta reiksme push i nauja masyva
+    pirmakursiai.push(studObj);
+  }
+  // 2.b jei ne tai ... nieko
+});
+//3. ciklo pabaigoje turetume buti atrinke tik pirmo kurso studentus
+console.log('pirmakursiai ===', pirmakursiai);
 // 2. Atrenkame visus Informatikos fakulteto studentus
 
 // 3. Atrenkame visus Elektros ir elektronikos fakulteto studentus
