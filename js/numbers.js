@@ -20,6 +20,12 @@ function makeListOfArrayInner(arr, dest) {
   });
   string += '</ol>';
   dest.innerHTML = string;
+  const better = `
+  <ol>
+  ${arr.map((sk) => `<li>${sk}</li>`).join('')}
+  </ol>
+  `;
+  dest.innerHTML = better;
 }
 makeListOfArrayInner(numbers, sarEl);
 // 2. grazinti objektu masyva kuriu key yra 'reiksme' o value yra masyvo reiksme

@@ -260,6 +260,8 @@ console.log('smallerStudetArray ===', smallerStudetArray);
 // 5.0 sugeneruoti htmle, divo viduje mygtukus su visu studentu vardais.
 
 // 5. surasti studenta vardu 'Cilindras' ir grazinti jo objekta
+const cilObj = students.find((stObj) => stObj.name === 'Cilindras');
+console.log('cilObj ===', cilObj);
 
 // 6. sukurti funkcija kuriai padavus pavarde ji grazina kelintame kurse mokosi studentas
 
@@ -268,3 +270,5 @@ console.log('smallerStudetArray ===', smallerStudetArray);
 // 8. parasysi funkcija kuriai padatus modulio objekta ji grazina pazymiu vidurki
 
 // 9. sukuurti funkcija pavadinimu arrAvg(). ji gauna masyva kaip argumenta ir grazina jo vidurki.
+// 1. sukti cikla per gauta masyva ir sudeti visus narius
+// 2. grazinti visa benra suma padalinta is kiek yra masyve nariu
