@@ -198,3 +198,30 @@ const students = [
     ],
   },
 ];
+
+/*
+  1. Peržvelgti students masyvą, jeigu patogu susibraižyti ant lapo duoenų struktūras, kad būtų aiškiau kas kam priklauso.
+  2. Peržiūrėti duomenis naršyklės konsolėje, jie pateikti naudojant console.table
+  3. Pagal funkcijų aprašus implementuoti logiką ir pavaizduoti korektiška funkcijų veikimą.
+    3.1 Naudoti Array.prototype metodus:
+      3.1.1 - forEach
+      3.1.2 - map
+      3.1.3 - filter
+      3.1.4 - reduce
+      3.1.5 - sort
+      3.1.6 - slice
+
+  Užduotims atlikti galima patiems susigalvoti papildomas funkcijas, jas pasivadinti ir panaudoti.
+  Taip pat galima ir labai skatintina naudoti jau aprašytas funkcijas kitų užduočių sprendimui. (Code reuse)
+*/
+
+const kiekStudentu = students.length;
+console.log('kiekStudentu ===', kiekStudentu);
+
+// atrinkti tik pirmo kurso studentus
+
+// 2. Atrenkame visus Informatikos fakulteto studentus
+
+// 3. Atrenkame visus Elektros ir elektronikos fakulteto studentus
+
+// 4. Graziname nauja masyva kuriame yra tik studento name, surname ir faculty.
