@@ -15,3 +15,7 @@ const numbers = [1, 2, 3, 5.3, 8, -8, -5.5, -6, -16, -5, -9, 4.2, 5, 12, -6, 45]
 // 14. Atrinkti kas penktą elementą į naują masyvą
 
 // 15. atrinkti reiksme kuri lygi -16, grazinti/atspausdinti jos indexa
+
+// 18. Rasti didžiausią skaičių masyve
+
+// 19. Rasti mažiausią skaičių masyve
