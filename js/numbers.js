@@ -1,7 +1,27 @@
 const numbers = [1, 2, 3, 5.3, 8, -8, -5.5, -6, -16, -5, -9, 4.2, 5, 12, -6, 45];
 
 // 1. sugeneruoti rikiuota sarasa is numbers masyvo reiksmiu ir ideti i html
+function makeListOfArray(arr, dest) {
+  const olEl = document.createElement('ol');
+  arr.forEach((sk) => {
+    const liEl = document.createElement('li');
+    liEl.textContent = sk;
+    olEl.append(liEl);
+  });
+  dest.append(olEl);
+}
+const sarEl = document.getElementById('sarasas');
+// makeListOfArray(numbers, sarEl);
 
+function makeListOfArrayInner(arr, dest) {
+  let string = '<ol>';
+  arr.forEach((sk) => {
+    string += `<li>${sk}</li>`;
+  });
+  string += '</ol>';
+  dest.innerHTML = string;
+}
+makeListOfArrayInner(numbers, sarEl);
 // 2. grazinti objektu masyva kuriu key yra 'reiksme' o value yra masyvo reiksme
 // [
 //   {reiksme: 1},
