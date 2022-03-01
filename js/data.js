@@ -216,7 +216,7 @@ const students = [
 */
 
 const kiekStudentu = students.length;
-console.log('kiekStudentu ===', kiekStudentu);
+// console.log('kiekStudentu ===', kiekStudentu);
 
 // 1. atrinkti tik pirmo kurso studentus
 //Psiaudo kodas
@@ -234,10 +234,37 @@ students.forEach((studObj) => {
 //3. ciklo pabaigoje turetume buti atrinke tik pirmo kurso studentus
 // console.log('pirmakursiai ===', pirmakursiai);
 const primakursiaiFilter = students.filter((studObj) => studObj.course === 1);
-console.log('primakursiaiFilter ===', primakursiaiFilter);
+// console.log('primakursiaiFilter ===', primakursiaiFilter);
 
-// 2. Atrenkame vi sus Informatikos fakulteto studentus
+// 2. Atrenkame visus Informatikos fakulteto studentus
+const informatikai = students.filter((studObj) => studObj.faculty === 'Informatikos fakultetas');
+console.log('informatikai ===', informatikai);
 
 // 3. Atrenkame visus Elektros ir elektronikos fakulteto studentus
 
 // 4. Graziname nauja masyva kuriame yra tik studento name, surname ir faculty.
+const smallerStudetArray = students.map((studentObj) => {
+  const { name, surname, faculty } = studentObj;
+  const newObj = {
+    name,
+    surname,
+    faculty,
+    nameSurname: `${studentObj.name} ${studentObj.surname}`,
+  };
+
+  return newObj;
+});
+console.log('smallerStudetArray ===', smallerStudetArray);
+
+// students
+// 5.0 sugeneruoti htmle, divo viduje mygtukus su visu studentu vardais.
+
+// 5. surasti studenta vardu 'Cilindras' ir grazinti jo objekta
+
+// 6. sukurti funkcija kuriai padavus pavarde ji grazina kelintame kurse mokosi studentas
+
+// 7. suskaiciuoti koks yra studento vardu 'Laptokas', 'Matematika' modulio vidurkis
+
+// 8. parasysi funkcija kuriai padatus modulio objekta ji grazina pazymiu vidurki
+
+// 9. sukuurti funkcija pavadinimu arrAvg(). ji gauna masyva kaip argumenta ir grazina jo vidurki.

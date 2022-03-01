@@ -1,6 +1,17 @@
 const numbers = [1, 2, 3, 5.3, 8, -8, -5.5, -6, -16, -5, -9, 4.2, 5, 12, -6, 45];
 
+// 1. sugeneruoti rikiuota sarasa is numbers masyvo reiksmiu ir ideti i html
+
+// 2. grazinti objektu masyva kuriu key yra 'reiksme' o value yra masyvo reiksme
+// [
+//   {reiksme: 1},
+//   {reiksme: 2},
+//   ...
+// ]
+
 //  3. Sukurkite ir atvaizduokite masyvą su dvigubomis reikšmėmis;
+const double = numbers.map((sk) => sk * 2);
+console.log('double ===', double);
 
 //  4. Sukurkite ir atvaizduokite masyvą su kvadratu pekltomis reikšmėmis;
 
