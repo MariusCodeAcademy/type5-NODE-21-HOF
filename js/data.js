@@ -232,8 +232,11 @@ students.forEach((studObj) => {
   // 2.b jei ne tai ... nieko
 });
 //3. ciklo pabaigoje turetume buti atrinke tik pirmo kurso studentus
-console.log('pirmakursiai ===', pirmakursiai);
-// 2. Atrenkame visus Informatikos fakulteto studentus
+// console.log('pirmakursiai ===', pirmakursiai);
+const primakursiaiFilter = students.filter((studObj) => studObj.course === 1);
+console.log('primakursiaiFilter ===', primakursiaiFilter);
+
+// 2. Atrenkame vi sus Informatikos fakulteto studentus
 
 // 3. Atrenkame visus Elektros ir elektronikos fakulteto studentus
 
