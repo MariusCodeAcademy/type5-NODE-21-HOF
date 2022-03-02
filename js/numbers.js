@@ -1,5 +1,15 @@
 const numbers = [1, 2, 3, 5.3, 8, -8, -5.5, -6, -16, -5, -9, 4.2, 5, 12, -6, 45];
 
+function arrAvg(someArray) {
+  let total = 0;
+  someArray.forEach((sk) => {
+    total += sk;
+  });
+  return total / someArray.length;
+}
+const numbersVIdurkis = arrAvg(numbers);
+console.log('numbersVIdurkis ===', numbersVIdurkis);
+
 // 1. sugeneruoti rikiuota sarasa is numbers masyvo reiksmiu ir ideti i html
 function makeListOfArray(arr, dest) {
   const olEl = document.createElement('ol');
