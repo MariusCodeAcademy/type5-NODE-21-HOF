@@ -1,12 +1,7 @@
+const arrAvg = require('./data');
+
 const numbers = [1, 2, 3, 5.3, 8, -8, -5.5, -6, -16, -5, -9, 4.2, 5, 12, -6, 45];
 
-function arrAvg(someArray) {
-  let total = 0;
-  someArray.forEach((sk) => {
-    total += sk;
-  });
-  return total / someArray.length;
-}
 const numbersVIdurkis = arrAvg(numbers);
 console.log('numbersVIdurkis ===', numbersVIdurkis);
 
@@ -20,7 +15,7 @@ function makeListOfArray(arr, dest) {
   });
   dest.append(olEl);
 }
-const sarEl = document.getElementById('sarasas');
+// const sarEl = document.getElementById('sarasas');
 // makeListOfArray(numbers, sarEl);
 
 function makeListOfArrayInner(arr, dest) {
@@ -37,7 +32,7 @@ function makeListOfArrayInner(arr, dest) {
   `;
   dest.innerHTML = better;
 }
-makeListOfArrayInner(numbers, sarEl);
+// makeListOfArrayInner(numbers, sarEl);
 // 2. grazinti objektu masyva kuriu key yra 'reiksme' o value yra masyvo reiksme
 // [
 //   {reiksme: 1},
