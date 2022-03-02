@@ -200,8 +200,9 @@ const students = [
     ],
   },
 ];
+
 // 7. suskaiciuoti koks yra studento vardu 'Laptokas', 'Matematika' modulio vidurkis
-laptokasMatAvg();
+const lapAvg = laptokasMatAvg();
 function laptokasMatAvg() {
   // 1. atrinkti Laptokas
   const laptokasObj = students.find((stObj) => stObj.name === 'Laptokas');
@@ -216,7 +217,7 @@ function laptokasMatAvg() {
   //   marks: [8, 9, 9, 9, 9],
   // },
   // 4. avgArr(moduleObj.marks)
-  const matAvg = arrAvg(moduleObj.marks);
+  const matAvg = moduleAvg(moduleObj);
   console.log('matAvg ===', matAvg);
   return matAvg;
 }
