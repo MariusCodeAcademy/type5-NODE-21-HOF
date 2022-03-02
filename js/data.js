@@ -238,7 +238,7 @@ const primakursiaiFilter = students.filter((studObj) => studObj.course === 1);
 
 // 2. Atrenkame visus Informatikos fakulteto studentus
 const informatikai = students.filter((studObj) => studObj.faculty === 'Informatikos fakultetas');
-console.log('informatikai ===', informatikai);
+// console.log('informatikai ===', informatikai);
 
 // 3. Atrenkame visus Elektros ir elektronikos fakulteto studentus
 
@@ -254,17 +254,29 @@ const smallerStudetArray = students.map((studentObj) => {
 
   return newObj;
 });
-console.log('smallerStudetArray ===', smallerStudetArray);
+// console.log('smallerStudetArray ===', smallerStudetArray);
 
 // students
 // 5.0 sugeneruoti htmle, divo viduje mygtukus su visu studentu vardais.
 
 // 5. surasti studenta vardu 'Cilindras' ir grazinti jo objekta
 const cilObj = students.find((stObj) => stObj.name === 'Cilindras');
-console.log('cilObj ===', cilObj);
+// console.log('cilObj ===', cilObj);
 
 // 6. sukurti funkcija kuriai padavus pavarde ji grazina kelintame kurse mokosi studentas
-
+// 6.0 sukti cikla per studentu ir ziurei ar kazkurio obj surnmae === duotai reiksmei
+// 6.1 atrinkti studenta pagal pavarde
+// 6.2 kai randam objekta,  grazinam kursa kuriame jis mokosi (stObj.course)
+function getCourseBySurname(pavarde) {
+  const foundStObj = students.find((stObj) => stObj.surname === pavarde);
+  // console.log('foundStObj ===', foundStObj);
+  if (foundStObj) {
+    return foundStObj.course;
+  }
+  console.log('studentas pavarde', pavarde, 'nerastas');
+}
+const kursasV = getCourseBySurname('Varžauskas');
+// console.log('kursasV ===', kursasV);
 // 7. suskaiciuoti koks yra studento vardu 'Laptokas', 'Matematika' modulio vidurkis
 
 // 8. parasysi funkcija kuriai padatus modulio objekta ji grazina pazymiu vidurki
@@ -272,3 +284,31 @@ console.log('cilObj ===', cilObj);
 // 9. sukuurti funkcija pavadinimu arrAvg(). ji gauna masyva kaip argumenta ir grazina jo vidurki.
 // 1. sukti cikla per gauta masyva ir sudeti visus narius
 // 2. grazinti visa benra suma padalinta is kiek yra masyve nariu
+
+// 10 parasyti funkcija kuri grazina 3 skaiciu vidurki
+// 10.1 funcijos vidueje panaudoti laikina kintamaji 'total' kuris butu lygus visu skaiciu sumai
+
+function avg3(sk1, sk2, sk3) {
+  let total = 0;
+  total += sk1;
+  total += sk2;
+  total += sk3;
+  console.log('total ===', total);
+  const avg = total / 3;
+  // console.log('avg ===', avg);
+  return avg;
+}
+
+const avg1 = avg3(1, 2, 3);
+console.log('avg1 ===', avg1);
+
+function arrAvg(someArray) {
+  let total = 0;
+  someArray.forEach((sk) => {
+    total += sk;
+  });
+  return total / someArray.length;
+}
+
+const avg11 = arrAvg([1, 2, 3]);
+console.log('avg11 ===', avg11);
